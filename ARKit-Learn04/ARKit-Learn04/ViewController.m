@@ -7,18 +7,61 @@
 //
 
 #import "ViewController.h"
+#import <SceneKit/SceneKit.h>
 
 @interface ViewController ()
 
+@property (nonatomic,weak) SCNView *scnview;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self setupSCNView];
+    [self createScene];
+    
+    
 }
-
+- (void)setupSCNView{
+    
+    SCNView *scnview = [[SCNView alloc]initWithFrame:CGRectMake(0, 0, 300, 300)];
+    scnview.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
+    scnview.backgroundColor = [UIColor lightGrayColor];
+    scnview.allowsCameraControl = true;
+    [self.view addSubview:scnview];
+    self.scnview = scnview;
+    
+}
+- (void)createScene{
+    
+    SCNScene *scene = [SCNScene scene];
+    self.scnview.scene = scene;
+    // 创建节点，添加到scene的根节点上
+    SCNNode *node = [SCNNode node];
+    [scene.rootNode addChildNode:node];
+    
+    // 创建一个球体几何绑定到节点上去
+    SCNSphere *sphere = [SCNSphere sphereWithRadius:0.5];
+    node.geometry = sphere;
+    
+    //给节点添加节点
+    // 创建子节点 给子节点添加几何形状
+    SCNNode *childNode = [SCNNode node];
+    //设置节点的位置
+    childNode.position = SCNVector3Make(-0.5, 0, 1);
+    //设置几何形状，我们选择立体字体
+    SCNText *text = [SCNText textWithString:@"让学习成为一种习惯" extrusionDepth:0.03];
+   //设置字体颜色
+    text.firstMaterial.diffuse.contents = [UIColor cyanColor];
+    //设置字体大小
+    text.font = [UIFont systemFontOfSize:.15];
+    //给节点绑定几何物体
+    childNode.geometry = text;
+    [node addChildNode:childNode];
+    
+}
 /*
 
 5-理解游戏场景和节点的概念
@@ -67,11 +110,6 @@
     self.gameView.backgroundColor = [UIColor blackColor];
     // 3.添加到父视图中去
     [self.view addSubview:self.gameView];
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self addSCNView];
 }
 
 此刻运行一下程序结果如下图
