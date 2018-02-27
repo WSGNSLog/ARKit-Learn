@@ -13,6 +13,7 @@
 		E38C336A20453E8900F3EBF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E38C336920453E8900F3EBF7 /* Assets.xcassets */; };
 		E38C336D20453E8900F3EBF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E38C336B20453E8900F3EBF7 /* LaunchScreen.storyboard */; };
 		E38C337020453E8900F3EBF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E38C336F20453E8900F3EBF7 /* main.m */; };
+		E3D9FB1120454FF900A74CD3 /* yizi.DAE in Resources */ = {isa = PBXBuildFile; fileRef = E3D9FB1020454FF900A74CD3 /* yizi.DAE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E38C336C20453E8900F3EBF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E38C336E20453E8900F3EBF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E38C336F20453E8900F3EBF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E3D9FB1020454FF900A74CD3 /* yizi.DAE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = yizi.DAE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		E38C335F20453E8900F3EBF7 /* ARKit-Learn03 */ = {
 			isa = PBXGroup;
 			children = (
+				E3D9FB1020454FF900A74CD3 /* yizi.DAE */,
 				E38C336020453E8900F3EBF7 /* AppDelegate.h */,
 				E38C336120453E8900F3EBF7 /* AppDelegate.m */,
 				E38C336320453E8900F3EBF7 /* ViewController.h */,
@@ -130,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E38C336D20453E8900F3EBF7 /* LaunchScreen.storyboard in Resources */,
+				E3D9FB1120454FF900A74CD3 /* yizi.DAE in Resources */,
 				E38C336A20453E8900F3EBF7 /* Assets.xcassets in Resources */,
 				E38C336820453E8900F3EBF7 /* Main.storyboard in Resources */,
 			);
@@ -281,6 +285,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3MBF9B5ZRL;
 				INFOPLIST_FILE = "ARKit-Learn03/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "test.ARKit-Learn03";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -295,6 +300,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3MBF9B5ZRL;
 				INFOPLIST_FILE = "ARKit-Learn03/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "test.ARKit-Learn03";
 				PRODUCT_NAME = "$(TARGET_NAME)";
