@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3F9C3332047A2D6002777E2 /* 2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = E3F9C3312047A2D6002777E2 /* 2.PNG */; };
+		E3F9C3342047A2D6002777E2 /* 1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = E3F9C3322047A2D6002777E2 /* 1.PNG */; };
 		E3FC9E972046475C007260DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FC9E962046475C007260DF /* AppDelegate.m */; };
 		E3FC9E9A2046475C007260DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FC9E992046475C007260DF /* ViewController.m */; };
 		E3FC9E9D2046475C007260DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3FC9E9B2046475C007260DF /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E3F9C3312047A2D6002777E2 /* 2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.PNG; sourceTree = "<group>"; };
+		E3F9C3322047A2D6002777E2 /* 1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.PNG; sourceTree = "<group>"; };
 		E3FC9E922046475C007260DF /* ARKit-Learn06.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ARKit-Learn06.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3FC9E952046475C007260DF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E3FC9E962046475C007260DF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		E3FC9E942046475C007260DF /* ARKit-Learn06 */ = {
 			isa = PBXGroup;
 			children = (
+				E3F9C3322047A2D6002777E2 /* 1.PNG */,
+				E3F9C3312047A2D6002777E2 /* 2.PNG */,
 				E3FC9E952046475C007260DF /* AppDelegate.h */,
 				E3FC9E962046475C007260DF /* AppDelegate.m */,
 				E3FC9E982046475C007260DF /* ViewController.h */,
@@ -131,6 +137,8 @@
 			files = (
 				E3FC9EA22046475C007260DF /* LaunchScreen.storyboard in Resources */,
 				E3FC9E9F2046475C007260DF /* Assets.xcassets in Resources */,
+				E3F9C3342047A2D6002777E2 /* 1.PNG in Resources */,
+				E3F9C3332047A2D6002777E2 /* 2.PNG in Resources */,
 				E3FC9E9D2046475C007260DF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +289,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3MBF9B5ZRL;
 				INFOPLIST_FILE = "ARKit-Learn06/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "test.ARKit-Learn06";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -295,6 +304,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3MBF9B5ZRL;
 				INFOPLIST_FILE = "ARKit-Learn06/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "test.ARKit-Learn06";
 				PRODUCT_NAME = "$(TARGET_NAME)";
