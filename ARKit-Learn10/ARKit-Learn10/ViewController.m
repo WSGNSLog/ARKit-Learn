@@ -38,6 +38,7 @@
     SCNBox *box = [SCNBox boxWithWidth:10 height:10 length:10 chamferRadius:0];
     box.firstMaterial.diffuse.contents = [UIImage imageNamed:@"1.PNG"];
     SCNNode *boxNode = [SCNNode nodeWithGeometry:box];
+    //
     boxNode.position = SCNVector3Make(0, 10, -100);
     [scnView.scene.rootNode addChildNode:boxNode];
     
@@ -46,9 +47,15 @@
     // 2.创建一个节点添加粒子系统
     SCNNode *particlenode = [SCNNode node];
     [particlenode addParticleSystem:particleSystem];
-    particlenode.position = SCNVector3Make(0, -1, 0);
+    particlenode.position = SCNVector3Make(0, 1, 0);
     // 3.将粒子系统节点设置为四方体的子节点
     [boxNode addChildNode:particlenode];
+    
+    SCNAction *move = [SCNAction repeatActionForever:[SCNAction moveBy:SCNVector3Make(0, 0, 10) duration:1]];
+    
+    [boxNode runAction:move];
+    
+    cameraNode.constraints = @[[SCNLookAtConstraint lookAtConstraintWithTarget:boxNode ]];
 }
 
 

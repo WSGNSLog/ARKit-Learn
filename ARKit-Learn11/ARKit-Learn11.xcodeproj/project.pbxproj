@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E34129042047F1DA00AB004F /* 1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = E34129032047F1D900AB004F /* 1.PNG */; };
+		E34129062047F1FE00AB004F /* floor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E34129052047F1FE00AB004F /* floor.jpg */; };
+		E34129092047F20D00AB004F /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = E34129072047F20D00AB004F /* spark.png */; };
+		E341290A2047F20D00AB004F /* fire.scnp in Resources */ = {isa = PBXBuildFile; fileRef = E34129082047F20D00AB004F /* fire.scnp */; };
 		E379A0882047CBDC005B476C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E379A0872047CBDC005B476C /* AppDelegate.m */; };
 		E379A08B2047CBDC005B476C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E379A08A2047CBDC005B476C /* ViewController.m */; };
 		E379A08E2047CBDC005B476C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E379A08C2047CBDC005B476C /* Main.storyboard */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E34129032047F1D900AB004F /* 1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.PNG; path = "../../ARKit-Learn06/ARKit-Learn06/1.PNG"; sourceTree = "<group>"; };
+		E34129052047F1FE00AB004F /* floor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = floor.jpg; sourceTree = "<group>"; };
+		E34129072047F20D00AB004F /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		E34129082047F20D00AB004F /* fire.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = fire.scnp; sourceTree = "<group>"; };
 		E379A0832047CBDC005B476C /* ARKit-Learn11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ARKit-Learn11.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E379A0862047CBDC005B476C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E379A0872047CBDC005B476C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,10 +66,14 @@
 		E379A0852047CBDC005B476C /* ARKit-Learn11 */ = {
 			isa = PBXGroup;
 			children = (
+				E34129032047F1D900AB004F /* 1.PNG */,
+				E34129052047F1FE00AB004F /* floor.jpg */,
 				E379A0862047CBDC005B476C /* AppDelegate.h */,
 				E379A0872047CBDC005B476C /* AppDelegate.m */,
 				E379A0892047CBDC005B476C /* ViewController.h */,
 				E379A08A2047CBDC005B476C /* ViewController.m */,
+				E34129072047F20D00AB004F /* spark.png */,
+				E34129082047F20D00AB004F /* fire.scnp */,
 				E379A08C2047CBDC005B476C /* Main.storyboard */,
 				E379A08F2047CBDC005B476C /* Assets.xcassets */,
 				E379A0912047CBDC005B476C /* LaunchScreen.storyboard */,
@@ -130,7 +142,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E379A0932047CBDC005B476C /* LaunchScreen.storyboard in Resources */,
+				E34129092047F20D00AB004F /* spark.png in Resources */,
+				E341290A2047F20D00AB004F /* fire.scnp in Resources */,
+				E34129042047F1DA00AB004F /* 1.PNG in Resources */,
 				E379A0902047CBDC005B476C /* Assets.xcassets in Resources */,
+				E34129062047F1FE00AB004F /* floor.jpg in Resources */,
 				E379A08E2047CBDC005B476C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,7 +295,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3MBF9B5ZRL;
+				DEVELOPMENT_TEAM = G32WQ32RAR;
 				INFOPLIST_FILE = "ARKit-Learn11/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -294,7 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3MBF9B5ZRL;
+				DEVELOPMENT_TEAM = G32WQ32RAR;
 				INFOPLIST_FILE = "ARKit-Learn11/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
