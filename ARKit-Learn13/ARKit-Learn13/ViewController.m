@@ -30,7 +30,35 @@
     cameraNode.camera = [SCNCamera camera];
     cameraNode.camera.automaticallyAdjustsZRange = true;
     [scnView.scene.rootNode addChildNode:cameraNode];
+ 
+    //索引到模型中的几何对象
+    NSURL *url1 = [[NSBundle mainBundle]URLForResource:@"aaa" withExtension:@"dae"];
+    NSURL *url2 = [[NSBundle mainBundle]URLForResource:@"aaa2" withExtension:@"dae"];
+    SCNScene *scene1 = [SCNScene sceneWithURL:url1 options:nil error:nil];
+    SCNScene *scene2 = [SCNScene sceneWithURL:url2 options:nil error:nil];
+    SCNGeometry *g1 = [scene1.rootNode childNodeWithName:@"plane" recursively:YES].geometry;
+    SCNGeometry *g2 = [scene2.rootNode childNodeWithName:@"plane" recursively:YES].geometry;
+    g1.firstMaterial.diffuse.contents = @"mapImage.png";;
+    g2.firstMaterial.diffuse.contents = @"mapImage.png";
     
+    //把第一个几何题绑定到节点上添加到场景中去
+    SCNNode *planeNode = [SCNNode node];
+    [scnView.scene.rootNode addChildNode:planeNode];
+    planeNode.geometry = g1;
+    [scnView.scene.rootNode addChildNode:planeNode];
+    
+    //创建一个过渡期，添加我们要过渡的模型
+    planeNode.morpher = [[SCNMorpher alloc]init];
+    planeNode.morpher.targets = @[g2];
+    
+    //设置过渡动画
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"morpher.weights[0]"]; // 0 代表过渡目标数组的第一个模型
+    animation.fromValue = @0.0;
+    animation.toValue = @1.0;
+    animation.autoreverses = YES;
+    animation.repeatCount = INFINITY;
+    animation.duration = 2;
+    [planeNode addAnimation:animation forKey:nil];
 }
 
 /*
