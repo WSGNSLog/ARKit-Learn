@@ -13,6 +13,12 @@
 		E34129A92048F9AB00AB004F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E34129A82048F9AB00AB004F /* Assets.xcassets */; };
 		E34129AC2048F9AB00AB004F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E34129AA2048F9AB00AB004F /* LaunchScreen.storyboard */; };
 		E34129AF2048F9AB00AB004F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E34129AE2048F9AB00AB004F /* main.m */; };
+		E3412D28204D453000AB004F /* earth.png in Resources */ = {isa = PBXBuildFile; fileRef = E3412D25204D453000AB004F /* earth.png */; };
+		E3412D29204D453000AB004F /* moon.png in Resources */ = {isa = PBXBuildFile; fileRef = E3412D26204D453000AB004F /* moon.png */; };
+		E3412D2A204D453000AB004F /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = E3412D27204D453000AB004F /* sun.png */; };
+		E3412D2E204D5F6400AB004F /* moon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E3412D2B204D5F6400AB004F /* moon.jpg */; };
+		E3412D2F204D5F6400AB004F /* sun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E3412D2C204D5F6400AB004F /* sun.jpg */; };
+		E3412D30204D5F6400AB004F /* earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E3412D2D204D5F6400AB004F /* earth.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		E34129AB2048F9AB00AB004F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E34129AD2048F9AB00AB004F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E34129AE2048F9AB00AB004F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E3412D25204D453000AB004F /* earth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earth.png; sourceTree = "<group>"; };
+		E3412D26204D453000AB004F /* moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moon.png; sourceTree = "<group>"; };
+		E3412D27204D453000AB004F /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = "<group>"; };
+		E3412D2B204D5F6400AB004F /* moon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moon.jpg; sourceTree = "<group>"; };
+		E3412D2C204D5F6400AB004F /* sun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sun.jpg; sourceTree = "<group>"; };
+		E3412D2D204D5F6400AB004F /* earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = earth.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,12 @@
 		E341299E2048F9AB00AB004F /* ARKit-Learn15 */ = {
 			isa = PBXGroup;
 			children = (
+				E3412D25204D453000AB004F /* earth.png */,
+				E3412D26204D453000AB004F /* moon.png */,
+				E3412D27204D453000AB004F /* sun.png */,
+				E3412D2D204D5F6400AB004F /* earth.jpg */,
+				E3412D2B204D5F6400AB004F /* moon.jpg */,
+				E3412D2C204D5F6400AB004F /* sun.jpg */,
 				E341299F2048F9AB00AB004F /* AppDelegate.h */,
 				E34129A02048F9AB00AB004F /* AppDelegate.m */,
 				E34129A22048F9AB00AB004F /* ViewController.h */,
@@ -129,6 +147,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3412D2A204D453000AB004F /* sun.png in Resources */,
+				E3412D28204D453000AB004F /* earth.png in Resources */,
+				E3412D2E204D5F6400AB004F /* moon.jpg in Resources */,
+				E3412D29204D453000AB004F /* moon.png in Resources */,
+				E3412D2F204D5F6400AB004F /* sun.jpg in Resources */,
+				E3412D30204D5F6400AB004F /* earth.jpg in Resources */,
 				E34129AC2048F9AB00AB004F /* LaunchScreen.storyboard in Resources */,
 				E34129A92048F9AB00AB004F /* Assets.xcassets in Resources */,
 				E34129A72048F9AB00AB004F /* Main.storyboard in Resources */,
@@ -279,8 +303,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3MBF9B5ZRL;
+				DEVELOPMENT_TEAM = G32WQ32RAR;
 				INFOPLIST_FILE = "ARKit-Learn15/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "test.ARKit-Learn15";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -293,8 +318,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3MBF9B5ZRL;
+				DEVELOPMENT_TEAM = G32WQ32RAR;
 				INFOPLIST_FILE = "ARKit-Learn15/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "test.ARKit-Learn15";
 				PRODUCT_NAME = "$(TARGET_NAME)";
