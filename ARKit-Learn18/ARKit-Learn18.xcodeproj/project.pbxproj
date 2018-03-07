@@ -13,6 +13,15 @@
 		E3412A312048F9E100AB004F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3412A302048F9E100AB004F /* Assets.xcassets */; };
 		E3412A342048F9E100AB004F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3412A322048F9E100AB004F /* LaunchScreen.storyboard */; };
 		E3412A372048F9E100AB004F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3412A362048F9E100AB004F /* main.m */; };
+		E3412D3B204F7F4100AB004F /* attack.dae in Resources */ = {isa = PBXBuildFile; fileRef = E3412D32204F7F3F00AB004F /* attack.dae */; };
+		E3412D3C204F7F4100AB004F /* walk.dae in Resources */ = {isa = PBXBuildFile; fileRef = E3412D33204F7F3F00AB004F /* walk.dae */; };
+		E3412D3D204F7F4100AB004F /* death.dae in Resources */ = {isa = PBXBuildFile; fileRef = E3412D34204F7F3F00AB004F /* death.dae */; };
+		E3412D3E204F7F4100AB004F /* hero.dae in Resources */ = {isa = PBXBuildFile; fileRef = E3412D35204F7F3F00AB004F /* hero.dae */; };
+		E3412D3F204F7F4100AB004F /* male_large_01.png in Resources */ = {isa = PBXBuildFile; fileRef = E3412D36204F7F3F00AB004F /* male_large_01.png */; };
+		E3412D40204F7F4100AB004F /* 1.PNG in Resources */ = {isa = PBXBuildFile; fileRef = E3412D37204F7F4000AB004F /* 1.PNG */; };
+		E3412D41204F7F4100AB004F /* foliage.png in Resources */ = {isa = PBXBuildFile; fileRef = E3412D39204F7F4000AB004F /* foliage.png */; };
+		E3412D42204F7F4100AB004F /* palm_tree.dae in Resources */ = {isa = PBXBuildFile; fileRef = E3412D3A204F7F4000AB004F /* palm_tree.dae */; };
+		E3412D44204F96E000AB004F /* floor.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E3412D43204F96DF00AB004F /* floor.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +35,15 @@
 		E3412A332048F9E100AB004F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3412A352048F9E100AB004F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3412A362048F9E100AB004F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E3412D32204F7F3F00AB004F /* attack.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = attack.dae; sourceTree = "<group>"; };
+		E3412D33204F7F3F00AB004F /* walk.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = walk.dae; sourceTree = "<group>"; };
+		E3412D34204F7F3F00AB004F /* death.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = death.dae; sourceTree = "<group>"; };
+		E3412D35204F7F3F00AB004F /* hero.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = hero.dae; sourceTree = "<group>"; };
+		E3412D36204F7F3F00AB004F /* male_large_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = male_large_01.png; sourceTree = "<group>"; };
+		E3412D37204F7F4000AB004F /* 1.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.PNG; sourceTree = "<group>"; };
+		E3412D39204F7F4000AB004F /* foliage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foliage.png; sourceTree = "<group>"; };
+		E3412D3A204F7F4000AB004F /* palm_tree.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = palm_tree.dae; sourceTree = "<group>"; };
+		E3412D43204F96DF00AB004F /* floor.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = floor.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,10 @@
 		E3412A262048F9E100AB004F /* ARKit-Learn18 */ = {
 			isa = PBXGroup;
 			children = (
+				E3412D37204F7F4000AB004F /* 1.PNG */,
+				E3412D43204F96DF00AB004F /* floor.jpg */,
+				E3412D31204F7F3F00AB004F /* hero */,
+				E3412D38204F7F4000AB004F /* palmTree */,
 				E3412A272048F9E100AB004F /* AppDelegate.h */,
 				E3412A282048F9E100AB004F /* AppDelegate.m */,
 				E3412A2A2048F9E100AB004F /* ViewController.h */,
@@ -69,6 +91,27 @@
 				E3412A362048F9E100AB004F /* main.m */,
 			);
 			path = "ARKit-Learn18";
+			sourceTree = "<group>";
+		};
+		E3412D31204F7F3F00AB004F /* hero */ = {
+			isa = PBXGroup;
+			children = (
+				E3412D32204F7F3F00AB004F /* attack.dae */,
+				E3412D33204F7F3F00AB004F /* walk.dae */,
+				E3412D34204F7F3F00AB004F /* death.dae */,
+				E3412D35204F7F3F00AB004F /* hero.dae */,
+				E3412D36204F7F3F00AB004F /* male_large_01.png */,
+			);
+			path = hero;
+			sourceTree = "<group>";
+		};
+		E3412D38204F7F4000AB004F /* palmTree */ = {
+			isa = PBXGroup;
+			children = (
+				E3412D39204F7F4000AB004F /* foliage.png */,
+				E3412D3A204F7F4000AB004F /* palm_tree.dae */,
+			);
+			path = palmTree;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,8 +173,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3412A342048F9E100AB004F /* LaunchScreen.storyboard in Resources */,
+				E3412D3D204F7F4100AB004F /* death.dae in Resources */,
+				E3412D3E204F7F4100AB004F /* hero.dae in Resources */,
+				E3412D41204F7F4100AB004F /* foliage.png in Resources */,
 				E3412A312048F9E100AB004F /* Assets.xcassets in Resources */,
+				E3412D3B204F7F4100AB004F /* attack.dae in Resources */,
+				E3412D44204F96E000AB004F /* floor.jpg in Resources */,
+				E3412D3F204F7F4100AB004F /* male_large_01.png in Resources */,
+				E3412D42204F7F4100AB004F /* palm_tree.dae in Resources */,
+				E3412D40204F7F4100AB004F /* 1.PNG in Resources */,
 				E3412A2F2048F9E100AB004F /* Main.storyboard in Resources */,
+				E3412D3C204F7F4100AB004F /* walk.dae in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
