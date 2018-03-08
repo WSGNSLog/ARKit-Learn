@@ -13,6 +13,7 @@
 		E3412A752048F9F700AB004F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3412A742048F9F700AB004F /* Assets.xcassets */; };
 		E3412A782048F9F700AB004F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3412A762048F9F700AB004F /* LaunchScreen.storyboard */; };
 		E3412A7B2048F9F700AB004F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3412A7A2048F9F700AB004F /* main.m */; };
+		E3412D5120512A7200AB004F /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = E3412D5020512A7200AB004F /* 1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E3412A772048F9F700AB004F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3412A792048F9F700AB004F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3412A7A2048F9F700AB004F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E3412D5020512A7200AB004F /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		E3412A6A2048F9F700AB004F /* ARKit-Learn21 */ = {
 			isa = PBXGroup;
 			children = (
+				E3412D5020512A7200AB004F /* 1.png */,
 				E3412A6B2048F9F700AB004F /* AppDelegate.h */,
 				E3412A6C2048F9F700AB004F /* AppDelegate.m */,
 				E3412A6E2048F9F700AB004F /* ViewController.h */,
@@ -130,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3412A782048F9F700AB004F /* LaunchScreen.storyboard in Resources */,
+				E3412D5120512A7200AB004F /* 1.png in Resources */,
 				E3412A752048F9F700AB004F /* Assets.xcassets in Resources */,
 				E3412A732048F9F700AB004F /* Main.storyboard in Resources */,
 			);
