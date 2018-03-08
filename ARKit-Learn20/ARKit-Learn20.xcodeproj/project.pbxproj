@@ -13,6 +13,11 @@
 		E3412A532048F9EF00AB004F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3412A522048F9EF00AB004F /* Assets.xcassets */; };
 		E3412A562048F9EF00AB004F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3412A542048F9EF00AB004F /* LaunchScreen.storyboard */; };
 		E3412A592048F9EF00AB004F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3412A582048F9EF00AB004F /* main.m */; };
+		E3412D4B2051053B00AB004F /* floor.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E3412D462051053B00AB004F /* floor.jpeg */; };
+		E3412D4C2051053B00AB004F /* blobShadow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E3412D472051053B00AB004F /* blobShadow.jpg */; };
+		E3412D4D2051053B00AB004F /* foliage.png in Resources */ = {isa = PBXBuildFile; fileRef = E3412D482051053B00AB004F /* foliage.png */; };
+		E3412D4E2051053B00AB004F /* palm_tree.dae in Resources */ = {isa = PBXBuildFile; fileRef = E3412D492051053B00AB004F /* palm_tree.dae */; };
+		E3412D4F2051053B00AB004F /* mip.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E3412D4A2051053B00AB004F /* mip.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		E3412A552048F9EF00AB004F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3412A572048F9EF00AB004F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3412A582048F9EF00AB004F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E3412D462051053B00AB004F /* floor.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = floor.jpeg; sourceTree = "<group>"; };
+		E3412D472051053B00AB004F /* blobShadow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blobShadow.jpg; sourceTree = "<group>"; };
+		E3412D482051053B00AB004F /* foliage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foliage.png; sourceTree = "<group>"; };
+		E3412D492051053B00AB004F /* palm_tree.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = palm_tree.dae; sourceTree = "<group>"; };
+		E3412D4A2051053B00AB004F /* mip.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mip.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 		E3412A482048F9EE00AB004F /* ARKit-Learn20 */ = {
 			isa = PBXGroup;
 			children = (
+				E3412D452051053B00AB004F /* palmTree */,
 				E3412A492048F9EF00AB004F /* AppDelegate.h */,
 				E3412A4A2048F9EF00AB004F /* AppDelegate.m */,
 				E3412A4C2048F9EF00AB004F /* ViewController.h */,
@@ -69,6 +80,18 @@
 				E3412A582048F9EF00AB004F /* main.m */,
 			);
 			path = "ARKit-Learn20";
+			sourceTree = "<group>";
+		};
+		E3412D452051053B00AB004F /* palmTree */ = {
+			isa = PBXGroup;
+			children = (
+				E3412D462051053B00AB004F /* floor.jpeg */,
+				E3412D472051053B00AB004F /* blobShadow.jpg */,
+				E3412D482051053B00AB004F /* foliage.png */,
+				E3412D492051053B00AB004F /* palm_tree.dae */,
+				E3412D4A2051053B00AB004F /* mip.jpg */,
+			);
+			path = palmTree;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,9 +152,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3412D4B2051053B00AB004F /* floor.jpeg in Resources */,
 				E3412A562048F9EF00AB004F /* LaunchScreen.storyboard in Resources */,
 				E3412A532048F9EF00AB004F /* Assets.xcassets in Resources */,
+				E3412D4D2051053B00AB004F /* foliage.png in Resources */,
+				E3412D4F2051053B00AB004F /* mip.jpg in Resources */,
+				E3412D4E2051053B00AB004F /* palm_tree.dae in Resources */,
 				E3412A512048F9EF00AB004F /* Main.storyboard in Resources */,
+				E3412D4C2051053B00AB004F /* blobShadow.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
