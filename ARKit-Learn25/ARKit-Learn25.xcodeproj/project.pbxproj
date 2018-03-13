@@ -13,6 +13,7 @@
 		E3412AFD2048FA2A00AB004F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3412AFC2048FA2A00AB004F /* Assets.xcassets */; };
 		E3412B002048FA2A00AB004F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3412AFE2048FA2A00AB004F /* LaunchScreen.storyboard */; };
 		E3412B032048FA2A00AB004F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E3412B022048FA2A00AB004F /* main.m */; };
+		E38D56E82057B48D003C4C4C /* WeChatSight1696.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E38D56E72057B48D003C4C4C /* WeChatSight1696.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +27,7 @@
 		E3412AFF2048FA2A00AB004F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3412B012048FA2A00AB004F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3412B022048FA2A00AB004F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E38D56E62057AE61003C4C4C /* WeChatSight1696.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WeChatSight1696.mp4; sourceTree = "<group>"; };
+		E38D56E72057B48D003C4C4C /* WeChatSight1696.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WeChatSight1696.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +60,7 @@
 		E3412AF22048FA2A00AB004F /* ARKit-Learn25 */ = {
 			isa = PBXGroup;
 			children = (
-				E38D56E62057AE61003C4C4C /* WeChatSight1696.mp4 */,
+				E38D56E72057B48D003C4C4C /* WeChatSight1696.mp4 */,
 				E3412AF32048FA2A00AB004F /* AppDelegate.h */,
 				E3412AF42048FA2A00AB004F /* AppDelegate.m */,
 				E3412AF62048FA2A00AB004F /* ViewController.h */,
@@ -134,6 +135,7 @@
 				E3412B002048FA2A00AB004F /* LaunchScreen.storyboard in Resources */,
 				E3412AFD2048FA2A00AB004F /* Assets.xcassets in Resources */,
 				E3412AFB2048FA2A00AB004F /* Main.storyboard in Resources */,
+				E38D56E82057B48D003C4C4C /* WeChatSight1696.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -43,9 +43,9 @@
     
     
     //创建一个2D游戏场景和一个播放视频的对象
-    NSURL *url2 = [[NSBundle mainBundle] URLForResource:@"WeChatSight1696" withExtension:@".mp4"];
-    NSURL *url = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"WeChatSight1696" ofType:@".mp4"]];
-    SKVideoNode *videoNode = [SKVideoNode videoNodeWithURL:[NSURL URLWithString:@"/Users/shiguang/Desktop/00myDemo/ARKit-Learn/ARKit-Learn25/ARKit-Learn25/WeChatSight1696.mp4"]];
+    //视频添加到项目中的时候,使用右击->add File to 的方式添加文件!!!
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"WeChatSight1696" withExtension:@"mp4"];
+    SKVideoNode *videoNode = [SKVideoNode videoNodeWithURL:url];
     videoNode.size = CGSizeMake(1600, 900);
     videoNode.position = CGPointMake(videoNode.size.width/2, videoNode.size.height/2);
     videoNode.zRotation = M_PI;
