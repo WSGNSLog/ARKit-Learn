@@ -26,6 +26,7 @@
 		E3412AFF2048FA2A00AB004F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3412B012048FA2A00AB004F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3412B022048FA2A00AB004F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E38D56E62057AE61003C4C4C /* WeChatSight1696.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = WeChatSight1696.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 		E3412AF22048FA2A00AB004F /* ARKit-Learn25 */ = {
 			isa = PBXGroup;
 			children = (
+				E38D56E62057AE61003C4C4C /* WeChatSight1696.mp4 */,
 				E3412AF32048FA2A00AB004F /* AppDelegate.h */,
 				E3412AF42048FA2A00AB004F /* AppDelegate.m */,
 				E3412AF62048FA2A00AB004F /* ViewController.h */,
@@ -279,8 +281,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3MBF9B5ZRL;
+				DEVELOPMENT_TEAM = G32WQ32RAR;
 				INFOPLIST_FILE = "ARKit-Learn25/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "test.ARKit-Learn25";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -293,8 +296,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3MBF9B5ZRL;
+				DEVELOPMENT_TEAM = G32WQ32RAR;
 				INFOPLIST_FILE = "ARKit-Learn25/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "test.ARKit-Learn25";
 				PRODUCT_NAME = "$(TARGET_NAME)";
