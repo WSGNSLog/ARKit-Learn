@@ -23,12 +23,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //创建游戏专用视图
+    SCNView *scnView = [[SCNView alloc]initWithFrame:self.view.bounds];
+    scnView.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:scnView];;
+    
+    scnView.scene = [SCNScene scene];
+    
+    //创建一个摄像机
+//    SCNNode *cameraNode = [SCNNode node];
+//    cameraNode.camera = [SCNCamera camera];
+//    cameraNode.camera.automaticallyAdjustsZRange = true;// 自动调节可视范围
+//    cameraNode.position = SCNVector3Make(0, 0, 10);
+//    [scnView.scene.rootNode addChildNode:cameraNode];
+    
+    //创建一个节点并绑定一个球体对象
+    SCNNode *sphereNode = [SCNNode node];
+    sphereNode.geometry = [SCNSphere sphereWithRadius:10];
+    sphereNode.rotation = SCNVector4Make(1, 0, 0, -M_PI/2);
+    [scnView.scene.rootNode addChildNode:sphereNode];
+    
+    NSURL * url = [[NSBundle mainBundle] URLForResource:@"WeChatSight1696" withExtension:@"mp4"];
+//    SKVideoNode *videoNode = [SKVideoNode videoNodeWithURL:url];
+    
+    
     //创建一个AVPlayer 对象
-    AVPlayer *player = [[AVPlayer alloc]init];
+    AVPlayer *player = [[AVPlayer alloc]initWithURL:url];
     
     //创建一个SCNVedioNode 对象
     SKVideoNode *videoNode = [[SKVideoNode alloc]initWithAVPlayer:player];
-    videoNode.size = CGSizeMake(VIDEO_WIDHT, VIDEO_HEIGHT);
+    videoNode.size = CGSizeMake(1600, 900);
+    videoNode.position = CGPointMake(videoNode.size.width/2, videoNode.size.height/2);
+    videoNode.zRotation = M_PI;
     
     //创建一个SKScene对象
     SKScene *skScene = [SKScene sceneWithSize:videoNode.size];
@@ -39,11 +65,33 @@
     videoNode.position = CGPointMake(VIDEO_WIDHT/2, VIDEO_HEIGHT/2);
     
     //将skScene对象设置为球体渲染的内容
+    sphereNode.geometry.firstMaterial.diffuse.contents  = skScene;
     
+    //监听播放器的当前时间,缓冲时间,视频总时长
+    id observerPlayerTime = [player addPeriodicTimeObserverForInterval:CMTimeMake(1, 1) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
+        // 处理逻辑代码
+        CMTimeShow(time);
+    }];
+    NSLog(@"==:%@",observerPlayerTime);
+    //视频可播放状态检测
+    [player reasonForWaitingToPlay];
     
+    //播放/暂停功能
+    
+    [player play];
+//    [player pause];
+    
+    //播放完成/失败检测
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(playToEndTime:) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(playFail:) name:AVPlayerItemNewErrorLogEntryNotification object:nil];
 }
-
-
+- (void)playToEndTime:(NSNotification *)noti{
+    NSLog(@"==:%@",noti);
+}
+- (void)playFail:(NSNotification *)noti{
+    NSLog(@"==:%@",noti);
+}
 /*
  32-如何创建将APlayer 加载的视频渲染到球体上
 
