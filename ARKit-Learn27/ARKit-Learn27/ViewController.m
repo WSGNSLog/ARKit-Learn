@@ -32,7 +32,6 @@
     [self.scene.rootNode addChildNode:sphereNode];
     
     //我们知道现在球体是有了,但是我们还需要一个眼睛去观察球体,在全景下,眼睛是根据重力感应,来调节观察的角度,所以我们下面创建一个眼睛节点,然后将其放入场景的中心点
-    
     SCNNode *eyeNode = [SCNNode node];
     eyeNode = [SCNNode node];
     eyeNode.camera = [SCNCamera camera]; // 创建照相机对象 就是眼睛

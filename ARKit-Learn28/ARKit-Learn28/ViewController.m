@@ -11,8 +11,8 @@
 #import <SceneKit/SceneKit.h>
 #import <SpriteKit/SpriteKit.h>
 
-#define VIDEO_WIDHT 1280
-#define VIDEO_HEIGHT 640
+#define VIDEO_WIDHT 1600
+#define VIDEO_HEIGHT 900
 
 @interface ViewController ()
 

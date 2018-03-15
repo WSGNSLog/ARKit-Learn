@@ -9,7 +9,10 @@
 #import "ViewController.h"
 #import <SceneKit/SceneKit.h>
 #import <SpriteKit/SpriteKit.h>
+#import <AVFoundation/AVFoundation.h>
 
+#define VIDEO_WIDHT 1600
+#define VIDEO_HEIGHT 900
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIView *gestureView;
 @property (assign, nonatomic)CGFloat lastPoint_x;
@@ -24,34 +27,86 @@
     SCNView *scnView = [[SCNView alloc]initWithFrame:self.view.bounds];
     [self.view addSubview:scnView];;
     
-    //创建一个摄像机
-    SCNNode *cameraNode = [SCNNode node];
-    cameraNode.camera = [SCNCamera camera];
-    cameraNode.camera.automaticallyAdjustsZRange = true;// 自动调节可视范围
-    cameraNode.position = SCNVector3Make(0, 0, 10);
-    [scnView.scene.rootNode addChildNode:cameraNode];
     
-    //创建一个节点并绑定一个平面几何对象
-    SCNNode *boxNode = [SCNNode node];
-    SCNPlane *plane = [SCNPlane planeWithWidth:16 height:9];
-    boxNode.geometry = plane;
-    boxNode.geometry.firstMaterial.doubleSided = true;
-    boxNode.position = SCNVector3Make(0, 0, -30);
-    [scnView.scene.rootNode addChildNode:boxNode];
+    SCNScene *scene = [SCNScene scene];
+    scnView.scene = scene;
+    
+    //创建一个摄像机
+//    SCNNode *cameraNode = [SCNNode node];
+//    cameraNode.camera = [SCNCamera camera];
+//    cameraNode.camera.automaticallyAdjustsZRange = true;// 自动调节可视范围
+//    cameraNode.position = SCNVector3Make(0, 0, 10);
+//    [scnView.scene.rootNode addChildNode:cameraNode];
+    
+    //创建一个节点并绑定一个球体对象
+    SCNNode *sphereNode = [SCNNode node];
+    sphereNode.geometry = [SCNSphere sphereWithRadius:10];
+    sphereNode.rotation = SCNVector4Make(1, 0, 0, -M_PI/2);
+    [scnView.scene.rootNode addChildNode:sphereNode];
+    
+    //我们知道现在球体是有了,但是我们还需要一个眼睛去观察球体,在全景下,眼睛是根据重力感应,来调节观察的角度,所以我们下面创建一个眼睛节点,然后将其放入场景的中心点
+//    SCNNode *eyeNode = [SCNNode node];
+//    eyeNode = [SCNNode node];
+//    eyeNode.camera = [SCNCamera camera]; // 创建照相机对象 就是眼睛
+//    eyeNode.camera.automaticallyAdjustsZRange = true; // 自动添加可视距离
+//        eyeNode.camera.xFov = 30;
+//        eyeNode.camera.yFov = 30;
+//        eyeNode.camera.focalBlurRadius = 0;
+////    eyeNode.camera.focalLength = 30;
+////    eyeNode.camera.focusDistance = 30;
+////    eyeNode.camera.fStop = 0;
+//    [scene.rootNode addChildNode:eyeNode];
     
     //创建一个2D游戏场景和一个播放视频的对象
     NSURL * url = [[NSBundle mainBundle] URLForResource:@"WeChatSight1696" withExtension:@"mp4"];
+    
+    //创建一个AVPlayer 对象
+    AVPlayer *player = [[AVPlayer alloc]initWithURL:url];
+    
     SKVideoNode *videoNode = [SKVideoNode videoNodeWithURL:url];
     videoNode.size = CGSizeMake(1600, 900);
     videoNode.position = CGPointMake(videoNode.size.width/2, videoNode.size.height/2);
     videoNode.zRotation = M_PI;
     SKScene* skScene = [SKScene sceneWithSize:videoNode.size];
+   
+
+    //让球体去渲染这个SKScene对象
     [skScene addChild:videoNode];
+    videoNode.position = CGPointMake(VIDEO_WIDHT/2, VIDEO_HEIGHT/2);
+    
+    //将skScene对象设置为球体渲染的内容
+    sphereNode.geometry.firstMaterial.diffuse.contents  = skScene;
+    
+    //监听播放器的当前时间,缓冲时间,视频总时长
+    id observerPlayerTime = [player addPeriodicTimeObserverForInterval:CMTimeMake(1, 1) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
+        // 处理逻辑代码
+        CMTimeShow(time);
+    }];
+    NSLog(@"==:%@",observerPlayerTime);
+    //视频可播放状态检测
+    [player reasonForWaitingToPlay];
+    
+    //播放/暂停功能
+    
+    [player play];
+    //    [player pause];
+    
+    //播放完成/失败检测
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(playToEndTime:) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(playFail:) name:AVPlayerItemNewErrorLogEntryNotification object:nil];
 
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panGesture:)];
     UIPinchGestureRecognizer *pin = [[UIPinchGestureRecognizer alloc]initWithTarget:self action:@selector(pinGesture:)];
     
     [self.gestureView addGestureRecognizer:pan];
+}
+
+- (void)playToEndTime:(NSNotification *)noti{
+    NSLog(@"==:%@",noti);
+}
+- (void)playFail:(NSNotification *)noti{
+    NSLog(@"==:%@",noti);
 }
 - (void)panGesture:(UIPanGestureRecognizer *)panGesture{
     if (panGesture.state == UIGestureRecognizerStateBegan){
